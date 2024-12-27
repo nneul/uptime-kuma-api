@@ -790,6 +790,8 @@ class UptimeKumaApi(object):
             kafkaProducerSsl: bool = False,
             kafkaProducerAllowAutoTopicCreation: bool = False,
             kafkaProducerSaslOptions: dict = None,
+
+            cacheBust: bool = False,
     ) -> dict:
         if accepted_statuscodes is None:
             accepted_statuscodes = ["200-299"]
@@ -843,6 +845,7 @@ class UptimeKumaApi(object):
             "body": body,
             "headers": headers,
             "authMethod": authMethod,
+            "cacheBust": cacheBust,
         })
 
         if parse_version(self.version) >= parse_version("1.23"):
