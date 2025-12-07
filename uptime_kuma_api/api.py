@@ -279,7 +279,7 @@ def _check_arguments_monitor(kwargs) -> None:
         MonitorType.RADIUS: ["radiusUsername", "radiusPassword", "radiusSecret", "radiusCalledStationId", "radiusCallingStationId"],
         MonitorType.REDIS: [],
         MonitorType.GROUP: [],
-        MonitorType.JSON_QUERY: ["url", "jsonPath", "expectedValue"],
+        MonitorType.JSON_QUERY: ["url", "jsonPath", "jsonPathOperator", "expectedValue"],
         MonitorType.REAL_BROWSER: ["url"],
         MonitorType.KAFKA_PRODUCER: ["kafkaProducerTopic", "kafkaProducerMessage"],
         MonitorType.TAILSCALE_PING: ["hostname"],
