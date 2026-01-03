@@ -970,6 +970,7 @@ class UptimeKumaApi(object):
         if type == MonitorType.JSON_QUERY:
             data.update({
                 "jsonPath": jsonPath,
+                "jsonPathOperator": jsonPathOperator,
                 "expectedValue": expectedValue,
             })
 
@@ -1238,6 +1239,7 @@ class UptimeKumaApi(object):
                 'interval': 60,
                 'invertKeyword': False,
                 'jsonPath': None,
+                'jsonPathOperator': None,
                 'kafkaProducerAllowAutoTopicCreation': False,
                 'kafkaProducerBrokers': None,
                 'kafkaProducerMessage': None,
