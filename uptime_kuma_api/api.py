@@ -781,6 +781,7 @@ class UptimeKumaApi(object):
 
             # JSON_QUERY
             jsonPath: str = None,
+            jsonPathOperator: str = None,
             expectedValue: str = None,
 
             # KAFKA_PRODUCER
